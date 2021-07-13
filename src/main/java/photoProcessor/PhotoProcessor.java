@@ -1,6 +1,8 @@
 package photoProcessor;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.json.JSONObject;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -13,10 +15,17 @@ public class PhotoProcessor {
     int width;
     int height;
 
-    public PhotoProcessor(ConsumerRecord<String, String> record) {
-        String message = record.value();
+    public PhotoProcessor(JSONObject messageObject) {
+//        String message = record.value();
+//        JSONObject messageObject = new JSONObject(message);
+//        {
+//            "url": String,
+//            "action": String
+//        }
+
         try {
-            URL input = new URL(message);
+            String url = messageObject.get("url").toString();
+            URL input = new URL(url);
             image = ImageIO.read(input);
             width = image.getWidth();
             height = image.getHeight();

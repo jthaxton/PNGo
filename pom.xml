@@ -12,11 +12,26 @@
       <artifactId>kafka-clients</artifactId>
       <version>1.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.openpnp</groupId>
+      <artifactId>opencv</artifactId>
+      <version>[4.3.0,)</version>
+    </dependency>
+    <!-- Thanks for using https://jar-download.com -->
+
+
+
+
 
     <dependency>
       <groupId>io.github.cdimascio</groupId>
       <artifactId>java-dotenv</artifactId>
       <version>3.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20200518</version>
     </dependency>
   </dependencies>
 
